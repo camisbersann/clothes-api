@@ -26,7 +26,7 @@ export const getClothes = (req, res) =>{
     if(arrayClothes.length <= 0) {
         return res.status(200).send({message: "Não há roupas no estoque"});
     } else {
-        return res.status(200).send(arrayClothes);
+        return res.status(200).send({"Roupas": arrayClothes, "quantidade de roupas": arrayClothes.length});
     }
 }
 
